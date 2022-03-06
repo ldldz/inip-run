@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { routeIdToBusNo } from "../data";
 import axios from "axios";
+import BusArrivalTimeListItem from "./BusArrivalTimeListItem";
 
 const BusArrivalTimeList = () => {
   const [busArrivalData, setBusArrivalData] = useState([]);
@@ -17,8 +18,8 @@ const BusArrivalTimeList = () => {
   return (
     <div className="busArrivalTimeList">
       {busArrivalData.map(([routeId, arrivalEstimateTime]) => (
-      <div>{`${routeIdToBusNo[routeId]} 남은 시간: ${parseInt(arrivalEstimateTime / 60)}분 ${arrivalEstimateTime % 60}초`}</div>
-    ))}
+        <BusArrivalTimeListItem busNo={routeIdToBusNo[routeId]} arrivalEstimateTime={arrivalEstimateTime}/>
+      ))}
     </div>
   );
 };
