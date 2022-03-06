@@ -1,0 +1,13 @@
+.busArrivalTimeListItem {
+  border-bottom: 1px solid gray;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.busNo {
+  color: blue;
+  font-size: 32px;
+}
+.arrivalEstimateTime {
+  font-size: 32px;
+}

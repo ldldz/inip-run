@@ -1,7 +1,6 @@
-import { useEffect, useState } from "react";
+import './style.css';
 
 const BusArrivalTimeListItem = ({busNo, arrivalEstimateTime}) => {
-  console.log(busNo, arrivalEstimateTime)
   return (
     <div className="busArrivalTimeListItem">
       <div className="busNo">{busNo}</div>
